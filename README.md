@@ -1,38 +1,22 @@
 🎟️ Ticket Management System – Frontend
 
-A role-based React.js frontend for a Ticket Management System that allows users to create tickets, agents to manage and resolve them, and admins to monitor analytics and performance dashboards.
+A React.js frontend application for a role-based Ticket Management System where users can create support tickets, agents handle resolutions, and admins monitor analytics dashboards.
 
 🚀 Features
 
-🔐 JWT Authentication (Login & Registration)
+JWT-based Authentication (Login & Register)
 
-👥 Role-Based Access Control
+Role-Based Access (User / Agent / Admin)
 
-User Dashboard
+Create & View Support Tickets
 
-Agent Dashboard
+Admin Analytics Dashboard (SLA, Ticket Volume, Agent Performance)
 
-Admin Dashboard
+AI-based Ticket Priority Update (TF-IDF)
 
-🎫 Create & Manage Support Tickets
+Protected Routes with Shared Layout
 
-📊 Admin Analytics Dashboard
-
-Ticket volume trends
-
-SLA breach rate
-
-Agent performance
-
-🤖 AI-based Ticket Priority Update (TF-IDF integration)
-
-📎 File Upload Support
-
-🧭 Protected Routes with Layout (Sidebar + Header)
-
-⚡ Reusable Axios API Service
-
-🎨 Responsive & Clean UI
+Centralized Axios API Integration
 
 🛠️ Tech Stack
 
@@ -40,105 +24,30 @@ React.js (Vite)
 
 React Router DOM
 
-Context API (Auth Management)
+Context API
 
-Axios (API Calls)
+Axios
 
-Recharts (Charts & Analytics)
+Recharts
 
-JWT Decode
+CSS
 
-CSS / Inline Styling
+▶️ Setup & Run
+npm install
+npm run dev
 
-📁 Project Structure
-src/
-├── components/
-│   ├── Layout.jsx
-│   ├── Sidebar.jsx
-│   └── Header.jsx
-├── pages/
-│   ├── Login.jsx
-│   ├── Register.jsx
-│   ├── CreateTicket.jsx
-│   ├── MyTickets.jsx
-│   ├── AdminDashboard.jsx
-│   └── AgentDashboard.jsx
-├── AuthContext.jsx
-├── api.js
-├── App.jsx
-└── styles/
 
-🔐 Authentication Flow
-
-User logs in or registers
-
-Backend returns JWT token
-
-Token is stored in localStorage
-
-User role is decoded from JWT
-
-Routes are protected based on roles:
-
-user → My Tickets
-
-agent → Agent Dashboard
-
-admin → Admin Dashboard
-
-🔄 API Integration
-
-Centralized Axios instance (api.js)
-
-Automatically attaches JWT token to requests
-
-Handles:
-
-Ticket CRUD
-
-Analytics APIs
-
-Authentication APIs
-
-📊 Admin Dashboard Highlights
-
-Ticket Volume (Last 30 Days)
-
-SLA Breach Rate (24-hour rule)
-
-Agent Performance Bar Chart
-
-One-click AI Priority Update using TF-IDF
-
-⚙️ Environment Setup
-
-Create a .env file in the root:
+Create .env file:
 
 VITE_API_BASE=http://localhost:8000/api
 
-▶️ Run Locally
-# Install dependencies
-npm install
+👤 Roles & Access
 
-# Start development server
-npm run dev
+User: Create and track tickets
 
-🔒 Route Protection Example
-<RequireAuth allowedRoles={["admin"]}>
-  <Layout>
-    <AdminDashboard />
-  </Layout>
-</RequireAuth>
+Agent: Manage assigned tickets
 
-🎯 Future Enhancements
-
-Real-time updates using WebSockets
-
-Notification system
-
-Dark mode
-
-Advanced ticket search & filters
+Admin: View analytics and control priorities
 
 👨‍💻 Author
 
