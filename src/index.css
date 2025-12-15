@@ -1,0 +1,56 @@
+:root{ --primary:#2563eb; --muted:#6b7280; --card:#ffffff; --bg:#f3f4f6; }
+*{box-sizing:border-box} body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--bg);margin:0;color:#111}
+.container{max-width:1100px;margin:24px auto;padding:16px} .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--card);border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.btn{background:var(--primary);color:white;padding:8px 12px;border-radius:6px;border:none;cursor:pointer} .card{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.06);} .grid{display:grid;grid-template-columns:1fr 340px;gap:16px}
+.list-item{padding:10px;border-bottom:1px solid #eef2f7} .kv{font-size:13px;color:var(--muted)}
+.input{padding:8px;border-radius:6px;border:1px solid #e5e7eb}
+
+
+.container {
+  padding: 20px;
+}
+
+.page-title {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.ticket-table th, .ticket-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.ticket-table th {
+  background: #f4f4f4;
+  font-weight: bold;
+}
+
+.btn-small {
+  background: #444;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+}
+
+.status-badge.open { background: #6a5acd; }
+.status-badge.in_progress { background: #1e90ff; }
+.status-badge.resolved { background: #2e8b57; }
+.status-badge.closed { background: #555; }
+.status-badge.waiting { background: #ff8c00; }

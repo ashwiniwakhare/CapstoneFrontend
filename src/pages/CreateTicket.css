@@ -1,0 +1,139 @@
+/* --------------------------
+   Page Layout (Fix Scroll)
+--------------------------- */
+/* --------------------------
+   Page Layout - FIX SCROLL
+--------------------------- */
+.content-wrapper {
+    margin-left: 250px;          /* sidebar width */
+    margin-top: 60px;            /* header height */
+    padding: 20px;
+    height: calc(100vh - 60px);  /* FULL HEIGHT minus header */
+    overflow-y: hidden;          /* REMOVE SCROLL */
+    background: hsl(216, 29%, 97%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;     /* form stays at top */
+}
+
+
+
+
+/* --------------------------
+   Ticket Form Container
+--------------------------- */
+/* --------------------------
+   Ticket Form Container (Smaller)
+--------------------------- */
+.ticket-form-container {
+    max-width: 450px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;    /* lower top space */
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* --------------------------
+   Titles & Labels
+--------------------------- */
+.ticket-form-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.ticket-form-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.ticket-form-container label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #444;
+}
+
+/* --------------------------
+   Inputs & Textarea
+--------------------------- */
+.ticket-form-container input,
+.ticket-form-container select,
+.ticket-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.ticket-form-container textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+.ticket-form-container input:focus,
+.ticket-form-container select:focus,
+.ticket-form-container textarea:focus {
+    border-color: #4a90e2;
+}
+
+/* --------------------------
+   File Upload
+--------------------------- */
+.file-input {
+    margin-top: 8px;
+}
+
+.file-name {
+    margin-top: 5px;
+    color: #444;
+    font-size: 13px;
+}
+
+/* --------------------------
+   Submit Button
+--------------------------- */
+.submit-btn {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #3b78c2;
+}
+
+/* --------------------------
+   Success & Error
+--------------------------- */
+.error-message {
+    background: #ffe5e5;
+    padding: 10px;
+    border-radius: 8px;
+    color: #d00;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.success-message {
+    background: #e6ffe9;
+    padding: 10px;
+    border-radius: 8px;
+    color: #087a17;
+    margin-bottom: 10px;
+    font-size: 14px;
+}

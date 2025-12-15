@@ -1,0 +1,32 @@
+/* Layout container */
+.layout-container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Full height layout */
+  overflow: hidden;
+  /* overflow-y: auto; */
+  padding-bottom: 80px;
+}
+
+/* Sidebar is already fixed width (240px) in your component */
+.main-content {
+  margin-left: 240px; /* Match sidebar width */
+  width: calc(100% - 240px);
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header fixed at top inside main-content */
+.main-content > .header {
+  flex-shrink: 0;
+}
+
+/* Page content area */
+.page-content {
+  flex: 1;
+  padding: 20px 30px;
+       /* Only this area scrolls */
+  scroll-behavior: smooth;
+}

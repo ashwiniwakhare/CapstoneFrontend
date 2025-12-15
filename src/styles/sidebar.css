@@ -1,0 +1,137 @@
+/* =============================
+   SIDEBAR MAIN CONTAINER
+=============================== */
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+/* scroll hide */
+.sidebar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 250px;
+  /* background: #1e1e2d; */
+  color: #fff;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar-content {
+  margin-top: 80px;
+}
+
+
+
+
+/* =============================
+   SIDEBAR HEADER / LOGO
+=============================== */
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.sidebar-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 0.3px;
+}
+
+/* =============================
+   MENU LINKS
+=============================== */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #374151;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+
+.sidebar-menu a:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* =============================
+   LOGOUT BUTTON (BOTTOM FIXED)
+=============================== */
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.sidebar-logout {
+  width: 100%;
+  background: #ef4444;
+  border: none;
+  padding: 10px 14px;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar-logout:hover {
+  background: #dc2626;
+}
+
+/* =============================
+   RESPONSIVE SIDEBAR (MOBILE)
+=============================== */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: absolute;
+    left: -260px;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+}
